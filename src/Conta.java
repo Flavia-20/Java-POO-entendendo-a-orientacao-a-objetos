@@ -4,7 +4,7 @@ public class Conta {
    double saldo;
    int agencia;
    int numero;
-   String titular;
+   Cliente titular;
 
    public void deposita(double valor){
 /* void é o que o metodo retorna(no caso, nada) o vlaor é o que ele recebe*/
