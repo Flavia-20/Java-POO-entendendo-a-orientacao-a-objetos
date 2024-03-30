@@ -6,4 +6,19 @@ public class Conta {
    int numero;
    String titular;
 
+   public void deposita(double valor){
+/* void é o que o metodo retorna(no caso, nada) o vlaor é o que ele recebe*/
+        this.saldo = this.saldo + valor;
+   }
+
+   public boolean saca(double valor){
+        /*boolean retorna true ou false*/
+       if(this.saldo >= valor){
+           this.saldo -= valor;
+           return true;
+       }else{
+           return false;
+       }
+   }
+
 }
