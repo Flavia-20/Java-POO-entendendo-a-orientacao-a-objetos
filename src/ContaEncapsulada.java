@@ -1,10 +1,10 @@
-public class Conta {
+public class ContaEncapsulada {
 
-    /* essa classe Conta tem quatro atributos*/
-    /*Quando um atributo é privado ele não pode ser modificado por ninguem a não ser a própria classe*/
+    /*Quando um atributo é privado ele não pode ser modificado por ninguem a não ser a própria classe
+    Aqui todos os atributos foram deixados privados*/
    private double saldo;
-   int agencia;
-   int numero;
+    private int agencia;
+    private int numero;
    Cliente titular;
 
    public void deposita(double valor){
@@ -22,7 +22,7 @@ public class Conta {
 
        }
    }
-   public boolean transfere(double valor, Conta destino){
+   public boolean transfere(double valor, ContaEncapsulada destino){
         if(this.saldo >= valor){
             this.saldo -= valor;
             destino.deposita((valor));
@@ -34,6 +34,17 @@ public class Conta {
    public double getSaldo(){
        return this.saldo;
    }
+   public int getNumero(){
+       return this.numero;
+   }
+   public void setNumero(int novoNumero){
+       this.numero = novoNumero;
+   }
+    public int getAgencia() {
+        return this.agencia;
+    }
 
-
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
 }
